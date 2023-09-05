@@ -31,15 +31,15 @@ class UserSeeder extends Seeder
             'status' => 1,
         ]);
 
-        $user = User::create([
+        $kurator = User::create([
             "id" => 2,
             "name" => "Hani",
-            "display_name" => "user 1 display name",
+            "display_name" => "kurator display name",
             "email" => "hani@mni.id",
             'password' => bcrypt('password'),
             "phone" => "082233335555",
             "address" => "Jalan Mawar No. 4",
-            "departement" => "User",
+            "departement" => "Kurator",
             "status" => 1,
         ]);
 
@@ -160,7 +160,7 @@ class UserSeeder extends Seeder
 
         
         //ROLE ADMIN
-        $role = Role::create(['name' => 'User'])
+        $role = Role::create(['name' => 'Kurator'])
         ->givePermissionTo([
             //MASTER
                 //pameran
@@ -182,8 +182,8 @@ class UserSeeder extends Seeder
                 'profile-edit',
             ]);
 
-            $user = $user->fresh();
-            $user->syncRoles(['user']);
+            $kurator = $kurator->fresh();
+            $kurator->syncRoles(['kurator']);
 
 
 

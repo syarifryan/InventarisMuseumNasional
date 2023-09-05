@@ -319,6 +319,7 @@
                                         <input type="file" class="form-control" id="img_ktp" name="img_ktp" >
                                     </div>
                             </div>
+                            
                             <div class="mb-3">
                                 <label for="information_media_id" class="col-form-label">
                                     <span class="text-danger me-4">*</span>
@@ -336,6 +337,7 @@
                                         <option value="8">Lainnya</option>
                                     </select>
                             </div>
+
                         </div>
                     </div>
                     <div class="modal-footer pt-0 px-24 pb-24">
