@@ -118,100 +118,225 @@
                 </div>
                 <form method="POST" id="formInventaris" action="{{route('dashboard.proses.store')}}">
                     @csrf
-                    <div class="modal-body">
+                    <div class="modal-body" style="padding: 20px">
                         {{-- <input type="text" id="id" name="id" class="kontraktor" hidden> --}}
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Jenis Koleksi</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
+                        <div class="col-12 mt-16">
+                            <div class="col-12 col-md-12">
+                                <div class="mb-24">
+                                    <label for="nama_customer" class="form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Jenis Koleksi
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Jenis Koleksi" value="{{ old('nama_customer') }}" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Nama Benda</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
+                            <div class="col-12 col-md-12">
+                                <div class="mb-24">
+                                    <label for="nama_customer" class="form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Nama Benda
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Nama Benda" value="{{ old('nama_customer') }}" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Nomor Inventaris</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <div class="mb-24">
+                                        <label for="nama_customer" class="col-form-label">
+                                            <span class="text-danger me-4">*</span>
+                                            Nomor Inventaris Lama
+                                        </label>
+                                        <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan No Inv Lama" value="{{ old('nama_customer') }}" required>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="regency_id" class="col-form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Nomor Inventaris Baru
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan No Inv Baru" value="{{ old('nama_customer') }}" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Nomor Registrasi</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
+                            
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <div class="mb-24">
+                                        <label for="nama_customer" class="col-form-label">
+                                            <span class="text-danger me-4">*</span>
+                                            Nomor Registrasi Lama
+                                        </label>
+                                        <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan No Reg Lama" value="{{ old('nama_customer') }}" required>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="regency_id" class="col-form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Nomor Registrasi Baru
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan No Reg Baru" value="{{ old('nama_customer') }}" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Nomor Registrasi</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Tempat Penyimpanan</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Ukuran</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Bahan</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="co" class="col-sm-3 mb-0">Teknik Pembuatan</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control co" id="last-co" 
-                                    name="co" required>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="form-group mb-12">
-                            <div class="row align-items-center">
-                                <label for="date" class="col-sm-3 mb-0">Date</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control date" id="last-date"
-                                        name="date" readonly required>
+                            <div class="col-12 col-md-12">
+                                <label for="no_ktp" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Tempat Penyimpanan
+                                </label>
+                                <input type="number"class="form-control" id="no_ktp" name="no_ktp" placeholder="Masukan Tempat Penyimpanan" value="{{ old('no_ktp') }}" >
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Ukuran
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Ukuran" value="{{ old('alamat_customer') }}" >
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <div class="mb-24">
+                                        <label for="nama_customer" class="col-form-label">
+                                            <span class="text-danger me-4">*</span>
+                                            Bahan
+                                        </label>
+                                        <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Bahan" value="{{ old('nama_customer') }}" required>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="regency_id" class="col-form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Teknik Pembuatan
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Teknik Pembuatan" value="{{ old('nama_customer') }}" required>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <div class="mb-24">
+                                        <label for="nama_customer" class="col-form-label">
+                                            <span class="text-danger me-4">*</span>
+                                            Tempat Asal
+                                        </label>
+                                        <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Tempat Asal" value="{{ old('nama_customer') }}" required>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="regency_id" class="col-form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Negara
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Negara" value="{{ old('nama_customer') }}" required>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="regency_id" class="col-form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Provinsi
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Provinsi" value="{{ old('nama_customer') }}" required>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="regency_id" class="col-form-label">
+                                        <span class="text-danger me-4">*</span>
+                                        Kabupaten
+                                    </label>
+                                    <input type="text" class="form-control" id="nama_customer" name="nama_customer" placeholder="Masukan Kabupaten" value="{{ old('nama_customer') }}" required>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Tempat Pembuatan
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Tempat Pembuatan" value="{{ old('alamat_customer') }}" >
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Tempat Temuan
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Temuan" value="{{ old('alamat_customer') }}" >
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Tahun Pembuatan
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Tahun Pembuatan" value="{{ old('alamat_customer') }}" >
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Kegunaan / Fungsi
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Kegunaan/Fungsi" value="{{ old('alamat_customer') }}" >
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Cara Perolehan
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Cara Perolehan" value="{{ old('alamat_customer') }}" >
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Tempat Perolehan
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Tempat Perolehan" value="{{ old('alamat_customer') }}" >
+                            </div>
+
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Kondisi
+                                </label>
+                                <input type="text" class="form-control" id="alamat_customer" name="alamat_customer" placeholder="Masukan Kondisi" value="{{ old('alamat_customer') }}" >
+                            </div>
+
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Deskripsi
+                                </label>
+                                <textarea class="form-control" name="" id="" cols="30" rows="2" placeholder="Masukan Deskripsi"></textarea>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <label for="alamat_customer" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Keterangan
+                                </label>
+                                <textarea class="form-control" name="" id="" cols="30" rows="2" placeholder="Masukan Keterangan"></textarea>
+                            </div>
+                           
+                            <div class="mb-3">
+                                <label for="img_ktp" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Foto Koleksi
+                                </label>
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="img_ktp" name="img_ktp" >
+                                    </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="information_media_id" class="col-form-label">
+                                    <span class="text-danger me-4">*</span>
+                                    Sumber Informasi
+                                </label>
+                                    <select class="form-select" id="information_media_id" name="information_media_id" value="{{ old('information_media_id') }}" >
+                                        <option selected disabled>-- Pilih Sumber Informasi --</option>
+                                        <option value="1">Referensi Teman</option>
+                                        <option value="2">Pameran</option>
+                                        <option value="3">Iklan Jalan</option>
+                                        <option value="4">Instagram</option>
+                                        <option value="5">Facebook</option>
+                                        <option value="6">WhatsApp</option>
+                                        <option value="7">Email</option>
+                                        <option value="8">Lainnya</option>
+                                    </select>
+                            </div>
                         </div>
-                        
                     </div>
                     <div class="modal-footer pt-0 px-24 pb-24">
                         <div class="divider"></div>
